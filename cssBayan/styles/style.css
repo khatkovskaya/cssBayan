@@ -68,3 +68,13 @@
 .bayan__item:target::after {
   background: url("../img/icons/close.svg") center no-repeat;
 }
+
+.bayan__link:active .bayan__title {
+  color: blue;
+  opacity: 0.7;
+}
+
+.bayan__link:active .bayan__image {
+  color: blue;
+  opacity: 0.7;
+}
