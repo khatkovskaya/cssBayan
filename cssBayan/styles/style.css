@@ -46,9 +46,13 @@
 }
 
 .bayan__image {
-  display: none;
+  display: block;
+  visibility: hidden;
+  transition: opacity 1s ease-out;
   width: 50%;
-  margin-bottom: 25px;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
 }
 
 .bayan__title {
@@ -62,7 +66,9 @@
 
 .bayan__item:target .bayan__image,
 .bayan__item:hover .bayan__image { 
-  display: block;
+  visibility: visible;
+  opacity: 1;
+  height: auto;
 }
 
 .bayan__item:target::after {
