@@ -1,0 +1,91 @@
+.page {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page__container {
+  width: 820px;
+  margin: 0 auto;
+}
+
+.bayan {
+  cursor: pointer;
+}
+
+.bayan__item {
+  position: relative;
+}
+
+.bayan__item::after {
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  width: 25px;
+  height: 25px;
+  background: url("../img/icons/plus.svg") center no-repeat;
+}
+
+.bayan__list:hover .bayan__item::after {
+  visibility: visible;
+  opacity: 1;
+}
+
+.bayan__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bayan__item {
+  border-top: 1px gray solid;
+}
+
+.bayan__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.bayan__image {
+  display: block;
+  visibility: hidden;
+  transition: opacity 1s ease-out;
+  width: 50%;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.bayan__title {
+  color: blue;
+}
+
+.bayan__list:hover .bayan__title,
+.bayan__item:target .bayan__title {
+  color: black;
+} 
+
+.bayan__item:target .bayan__image,
+.bayan__item:hover .bayan__image { 
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.bayan__item:target::after {
+  background: url("../img/icons/close.svg") center no-repeat;
+}
+
+.bayan__link:active .bayan__title {
+  color: blue;
+  opacity: 0.7;
+}
+
+.bayan__link:active .bayan__image {
+  color: blue;
+  opacity: 0.7;
+}
