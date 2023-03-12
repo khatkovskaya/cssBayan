@@ -16,7 +16,9 @@
 }
 
 .bayan__item::after {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
   content: "";
   position: absolute;
   right: 20px;
@@ -27,7 +29,8 @@
 }
 
 .bayan__list:hover .bayan__item::after {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 .bayan__list {
